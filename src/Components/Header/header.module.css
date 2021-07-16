@@ -1,0 +1,50 @@
+.header {
+  height: 60px;
+  background-color: #eb3f43;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+.left {
+  display: flex;
+  margin-left: 15px;
+  align-items: center;
+}
+.barICon {
+  cursor: pointer;
+}
+.bar {
+  display: inline;
+  width: 3px;
+  height: 50px;
+  background-color: #fff;
+  margin: 0 10px;
+}
+a {
+  text-decoration: none;
+}
+.white {
+  color: #fff;
+}
+h4 {
+  margin-top: 28px;
+}
+h3 {
+  cursor: pointer;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+.right img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+.bellIcon {
+  margin-right: 20px;
+  margin-left: 15px;
+  cursor: pointer;
+}

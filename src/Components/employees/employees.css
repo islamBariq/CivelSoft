@@ -1,0 +1,152 @@
+.Employee__heading {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  background: #b5b5b5;
+  align-items: center;
+  padding: 0 20px;
+  margin-top: 5px;
+}
+
+.actions {
+  margin-top: 20px;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.action__icon__earth,
+.action__icon__search {
+  border: 2px solid #24298f;
+  padding: 5px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  width: 100px;
+}
+.action__icon__search {
+  background: #24298f;
+  padding: 7px;
+  margin-left: 10px;
+}
+.actions__left {
+  display: flex;
+}
+.action__search__input {
+  width: 500px;
+  height: 25px;
+  border: none;
+  outline: none;
+}
+
+.action__search {
+  border: 1px solid #777676;
+  padding: 3px;
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.action__search__container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.action__results__box {
+  width: 500px;
+  height: 200px;
+  background: white;
+  border: 1px solid #777676;
+  margin-left: 20px;
+  border-top: none;
+  z-index: 11111;
+  visibility: hidden;
+  position: absolute;
+  top: 35px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.results__box__content {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.results__box__content:hover {
+  background: #ededed;
+}
+.results__box__content img {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+
+.actions__right {
+  margin-right: 50px;
+}
+.actions__right__icon {
+  padding: 5px 10px;
+
+  border-left: 1px solid #bfbdbd;
+  margin: auto;
+  cursor: pointer;
+}
+.employees__contents {
+  margin-top: 50px;
+  margin-left: 10px;
+}
+.table__image {
+  height: 30px;
+  width: 30px;
+}
+
+/*  table style*/
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+table td,
+table th {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  cursor: pointer;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #dbd7d7fb;
+  color: black;
+}
+
+.clicked {
+  background: #ddd;
+}
+.pending,
+.refused,
+.success {
+  background: orange;
+  padding: 19px 5px;
+}
+.refused {
+  background: red;
+}
+
+.success {
+  background: green;
+}
