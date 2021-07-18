@@ -294,72 +294,69 @@ const Employee = (props) => {
             })}
           </tbody>
         </table>
-        <div className='page__footer'>
-          <div className='page__footer__left'>
-            <div className='request__level'>
-              <span className='blue'></span>
-              <span>Request Level</span>
-            </div>
-            <div className='under__approval'>
-              <span className='yellow'></span>
-              <span>Under Approval</span>
-            </div>
-            <div className='final__approve'>
-              <span className='green'></span>
-              <span>Final Approve</span>
-            </div>
-            <div className='action__taken'>
-              <span className='brown'></span>
-              <span>
-                Action Taken (Leaving is posted and approved or leaving
-                extension)
-              </span>
-            </div>
-            <div className='closed_trans'>
-              <span className='brown__dark'></span>
-              <span>Closed Transaction</span>
-            </div>
-            <div className='future__transaction'>
-              <span className='blue__light'></span>
-              <span>Future Date Transaction</span>
-            </div>
-            <div className='request__returned'>
-              <span className='red'></span>
-              <span>Returned</span>
-            </div>
-            <div className='request__hold'>
-              <span className='brown__3'></span>
-              <span>Hold</span>
-            </div>
-            <div className='request__hold__returned'>
-              <span className='gray'></span>
-              <span>Returned And On Hold</span>
-            </div>
-            <div className='request__extended'>
-              <span className='pink'></span>
-              <span>Extended Leave Request</span>
-            </div>
+      </div>
+      <div className='page__footer'>
+        <div className='page__footer__left'>
+          <div className='request__level'>
+            <span className='blue'></span>
+            <span>Request Level</span>
           </div>
+          <div className='under__approval'>
+            <span className='yellow'></span>
+            <span>Under Approval</span>
+          </div>
+          <div className='final__approve'>
+            <span className='green'></span>
+            <span>Final Approve</span>
+          </div>
+          <div className='action__taken'>
+            <span className='brown'></span>
+            <span>
+              Action Taken (Leaving is posted and approved or leaving extension)
+            </span>
+          </div>
+          <div className='closed_trans'>
+            <span className='brown__dark'></span>
+            <span>Closed Transaction</span>
+          </div>
+          <div className='future__transaction'>
+            <span className='blue__light'></span>
+            <span>Future Date Transaction</span>
+          </div>
+          <div className='request__returned'>
+            <span className='red'></span>
+            <span>Returned</span>
+          </div>
+          <div className='request__hold'>
+            <span className='brown__3'></span>
+            <span>Hold</span>
+          </div>
+          <div className='request__hold__returned'>
+            <span className='gray'></span>
+            <span>Returned And On Hold</span>
+          </div>
+          <div className='request__extended'>
+            <span className='pink'></span>
+            <span>Extended Leave Request</span>
+          </div>
+        </div>
 
-          <div className='page__footer__right'>
-            <input
-              type='number'
-              id='paginationInput'
-              placeholder={
-                'Page ' + (pageIndex + 1) + 'of ' + pageOptions.length
+        <div className='page__footer__right'>
+          <input
+            type='number'
+            id='paginationInput'
+            placeholder={'Page ' + (pageIndex + 1) + 'of ' + pageOptions.length}
+            onChange={(e) => {
+              const pageNumber = e.target.value
+                ? Number(e.target.value - 1)
+                : 0;
+              if (e.target.value > pageOptions.length) {
+                e.target.value = 0;
+              } else {
+                gotoPage(pageNumber);
               }
-              onChange={(e) => {
-                const pageNumber = e.target.value
-                  ? Number(e.target.value - 1)
-                  : 0;
-                if (e.target.value > pageOptions.length) {
-                  e.target.value = 0;
-                } else {
-                  gotoPage(pageNumber);
-                }
-              }}
-            ></input>
-          </div>
+            }}
+          ></input>
         </div>
       </div>
     </React.Fragment>

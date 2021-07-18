@@ -160,3 +160,10 @@ legend {
     font-size: 13px;
   }
 }
+
+@media (max-width: 500px) {
+  .fieldset__personal__info label {
+    display: flex;
+    flex-direction: column;
+  }
+}

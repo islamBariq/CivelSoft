@@ -24,7 +24,6 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   width: 100px;
-  
 }
 .action__icon__search {
   background: #24298f;
@@ -252,9 +251,36 @@ table th {
     width: 300px;
   }
 }
-@media(max-width:500px) {
+@media (max-width: 500px) {
   .action__search__input {
     width: 150px;
   }
+  .page__footer {
+    position: relative;
+  }
+}
+@media (max-width: 499px) {
+  .actions {
+    overflow: hidden;
+  }
+  .page__footer__left {
+    width: 75%;
+  }
+  .page__footer__right {
+    width: 25%;
+    margin-right: 30px;
+  }
+  .page__footer__right input {
+    width: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .page__footer {
+    height: auto;
+  }
+}
 
+html,
+body {
+  width: 100%;
 }

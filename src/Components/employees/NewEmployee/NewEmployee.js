@@ -62,7 +62,7 @@ export class NewEmployee extends Component {
     event.preventDefault();
   };
   onChangeHandler = (event) => {
-    const editEmployee = {...this.state.employee};
+    const editEmployee = { ...this.state.employee };
     if (
       event.target.name === 'leaveDate' ||
       event.target.name === 'rejoinDate' ||
@@ -103,11 +103,15 @@ export class NewEmployee extends Component {
       <>
         <div className='formContainer__new'>
           <div className='new__personal__info'>
-            <form onSubmit={(event) => this.onSubmitHandler(event)} id='myForm' className="form__new">
+            <form
+              onSubmit={(event) => this.onSubmitHandler(event)}
+              id='myForm'
+              className='form__new'
+            >
               <fieldset className='fieldset__personal__info'>
                 <legend>Personal Info</legend>
                 <label htmlFor='name'>
-                  Full Name
+                  <span> Full Name</span>
                   <input
                     type='text'
                     name='name'
@@ -117,7 +121,7 @@ export class NewEmployee extends Component {
                   />
                 </label>
                 <label htmlFor='jobTitle'>
-                  Job Title
+                  <span> Job Title</span>
                   <input
                     type='text'
                     name='jobTitle'
@@ -127,7 +131,7 @@ export class NewEmployee extends Component {
                   />
                 </label>
                 <label htmlFor='salaryProfile'>
-                  Salary Profile
+                  <span>Salary Profile</span>
                   <input
                     type='text'
                     required
@@ -137,7 +141,7 @@ export class NewEmployee extends Component {
                   />
                 </label>
                 <label htmlFor='code'>
-                  Code Number
+                  <span>Code Number</span>
                   <input
                     type='number'
                     name='code'
@@ -147,7 +151,7 @@ export class NewEmployee extends Component {
                   />
                 </label>
                 <label htmlFor='joiningDate'>
-                  Joining Date{' '}
+                  <span>Joining Date</span>{' '}
                   <input
                     type='date'
                     name='joiningDate'
@@ -156,7 +160,7 @@ export class NewEmployee extends Component {
                   />
                 </label>
                 <label htmlFor='hotel'>
-                  Location{' '}
+                  <span>Location</span>{' '}
                   <input
                     type='text'
                     name='hotel'
@@ -166,7 +170,8 @@ export class NewEmployee extends Component {
                   />
                 </label>
                 <label htmlFor='department'>
-                  Department
+                  <span>Department</span>
+
                   <input
                     type='text'
                     name='department'
@@ -177,7 +182,7 @@ export class NewEmployee extends Component {
                 </label>
 
                 <label htmlFor='specialist'>
-                  Specialist
+                  <span>Specialist</span>
                   <input
                     type='text'
                     placeholder='Your Specialist'
