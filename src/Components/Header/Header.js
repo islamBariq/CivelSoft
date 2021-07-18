@@ -4,8 +4,8 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 import { faSortDown } from '@fortawesome/free-solid-svg-icons';
-
 import avatar from '../../assets/man.png';
+import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <header className={classes.header}>
@@ -17,13 +17,13 @@ const Header = () => {
           className={classes.barICon}
         />
         <span className={classes.bar}></span>
-        <a href='' className={classes.white}>
+        <Link to='/' className={classes.white}>
           <h2>CIVILSOFT</h2>
-        </a>
-        <a href=''>
+        </Link>
+        <Link to='/'>
           {' '}
           <h4 className={classes.white}>HCMS</h4>
-        </a>{' '}
+        </Link>{' '}
       </div>
       <div className={classes.right}>
         <FontAwesomeIcon

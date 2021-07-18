@@ -24,6 +24,7 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   width: 100px;
+  
 }
 .action__icon__search {
   background: #24298f;
@@ -98,8 +99,9 @@
   cursor: pointer;
 }
 .employees__contents {
-  margin-top: 50px;
-  margin-left: 10px;
+  margin-top: 17px;
+  height: 100%;
+  overflow-x: auto;
 }
 .table__image {
   height: 30px;
@@ -113,6 +115,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   text-align: center;
+  overflow: scroll;
 }
 
 table td,
@@ -149,4 +152,109 @@ table th {
 
 .success {
   background: green;
+}
+
+@media (max-width: 768px) {
+  .actions {
+    flex-direction: column;
+  }
+  .actions__right {
+    margin-top: 20px;
+  }
+}
+.page__footer {
+  width: 100%;
+  background: rgb(224, 224, 224);
+  position: fixed;
+  bottom: 0;
+  height: 70px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  color: black !important;
+}
+.page__footer span {
+  color: black;
+  font-weight: bold;
+  font-size: 12px;
+}
+.blue,
+.yellow,
+.green,
+.blue,
+.brown,
+.brown__dark,
+.blue__light,
+.red,
+.brown__3,
+.pink,
+.gray {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: red;
+}
+.page__footer__left {
+  display: flex;
+}
+.blue {
+  background: blue;
+}
+.blue__light {
+  background: rgb(73, 134, 214);
+}
+.yellow {
+  background: rgb(212, 174, 50);
+}
+.green {
+  background: green;
+}
+.brown {
+  background: brown;
+}
+.brown__dark {
+  background: rgb(109, 41, 41);
+}
+.page__footer__left div {
+  display: flex;
+  margin-top: 10px;
+}
+.page__footer__left {
+  width: 70%;
+  flex-wrap: wrap;
+}
+.page__footer__right {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.page__footer__right input {
+  outline: none;
+  height: 24px;
+  width: 225px;
+  border: 1px solid #bcb8b8;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+.gray {
+  background: gray;
+}
+.pink {
+  background: pink;
+}
+.brown__3 {
+  background: rgb(104, 76, 16);
+}
+
+@media (max-width: 1000px) {
+  .action__search__input {
+    width: 300px;
+  }
+}
+@media(max-width:500px) {
+  .action__search__input {
+    width: 150px;
+  }
+
 }

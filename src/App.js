@@ -4,6 +4,7 @@ import './App.css';
 import PostLeave from './Components/PostLeaveForm/PostLeave';
 import { Route } from 'react-router-dom';
 import Employees from './Components/employees/Employees';
+import NewEmployee from './Components/employees/NewEmployee/NewEmployee';
 class App extends React.Component {
   state = {
     employees: [
@@ -103,7 +104,7 @@ class App extends React.Component {
         },
       },
       {
-        name: 'laura Anne Eggletion',
+        name: 'jane Anne Eggletion',
         reqNumber: 309,
         code: 156,
         image: 'https://image.flaticon.com/icons/png/512/1077/1077063.png',
@@ -166,6 +167,161 @@ class App extends React.Component {
           specialist: 'Human Resources',
         },
       },
+      {
+        name: 'Wassim Nizar',
+        reqNumber: 512,
+        code: 989,
+        image: 'https://image.flaticon.com/icons/png/512/1077/1077063.png',
+        jobTitle: 'react  developer',
+        salaryProfile: 'leader',
+        leaveDate: new Date(2021, 11, 9).toLocaleDateString(),
+        actualLeaving: '',
+        rejoinDate: new Date(2021, 11, 17).toLocaleDateString(),
+        leaveType: 'sick leave',
+        joiningDate: new Date(2010, 11, 9).toLocaleDateString(),
+        leaveToAvail: 'locale',
+        requireSalary: 'no',
+        guarantor: ['ahmed mohammed', 'ismail abo zaid'],
+        guarantorValue: '',
+        replacement: '',
+        address: '',
+        contactNumber: '',
+        email: '',
+        remarks: '',
+        condition: 'success',
+        file: 'https://image.flaticon.com/icons/png/512/1077/1077063.png',
+
+        daysNumber: '',
+        location: {
+          hotel: 'Hotel indigo',
+          department: 'Admin & General',
+          specialist: 'Human Resources',
+        },
+      },
+      {
+        name: 'Shahid Habibullah Mahmud',
+        reqNumber: 670,
+        code: 611,
+        image: 'https://image.flaticon.com/icons/png/512/1077/1077063.png',
+        jobTitle: 'call  center',
+        salaryProfile: 'junior',
+        leaveDate: new Date(2021, 9, 9).toLocaleDateString(),
+        actualLeaving: '',
+        rejoinDate: new Date(2021, 10, 17).toLocaleDateString(),
+        leaveType: 'sick leave',
+        joiningDate: new Date(2019, 5, 12).toLocaleDateString(),
+        leaveToAvail: 'locale',
+        requireSalary: 'no',
+        guarantor: ['ahmed mohammed', 'ismail abo zaid'],
+        guarantorValue: '',
+        replacement: '',
+        address: '',
+        contactNumber: '',
+        email: '',
+        remarks: '',
+        condition: 'success',
+        file: 'https://image.flaticon.com/icons/png/512/1077/1077063.png',
+
+        daysNumber: '',
+        location: {
+          hotel: 'Hotel indigo',
+          department: 'Admin & General',
+          specialist: 'Human Resources',
+        },
+      },
+      {
+        name: 'Nafisa Nurullah Gafar',
+        reqNumber: 4150,
+        code: 314,
+        image: 'https://image.flaticon.com/icons/png/512/1077/1077063.png',
+        jobTitle: 'digital  marketing',
+        salaryProfile: 'senior',
+        leaveDate: new Date(2021, 6, 3).toLocaleDateString(),
+        actualLeaving: '',
+        rejoinDate: new Date(2021, 6, 9).toLocaleDateString(),
+        leaveType: 'sick leave',
+        joiningDate: new Date(2014, 5, 12).toLocaleDateString(),
+        leaveToAvail: 'locale',
+        requireSalary: 'no',
+        guarantor: ['ahmed mohammed', 'ismail abo zaid'],
+        guarantorValue: '',
+        replacement: '',
+        address: '',
+        contactNumber: '',
+        email: '',
+        remarks: '',
+        condition: 'success',
+        file: 'https://image.flaticon.com/icons/png/512/1077/1077063.png',
+
+        daysNumber: '',
+        location: {
+          hotel: 'Hotel indigo',
+          department: 'Admin & General',
+          specialist: 'Human Resources',
+        },
+      },
+      {
+        name: 'Shukri Faiza Al-Amir',
+        reqNumber: 183,
+        code: 534,
+        image: 'https://image.flaticon.com/icons/png/512/1077/1077063.png',
+        jobTitle: 'digital  marketing',
+        salaryProfile: 'manager',
+        leaveDate: new Date(2021, 10, 10).toLocaleDateString(),
+        actualLeaving: '',
+        rejoinDate: new Date(2021, 10, 17).toLocaleDateString(),
+        leaveType: 'sick leave',
+        joiningDate: new Date(2019, 5, 12).toLocaleDateString(),
+        leaveToAvail: 'locale',
+        requireSalary: 'no',
+        guarantor: ['ahmed mohammed', 'ismail abo zaid'],
+        guarantorValue: '',
+        replacement: '',
+        address: '',
+        contactNumber: '',
+        email: '',
+        remarks: '',
+        condition: 'success',
+        file: 'https://image.flaticon.com/icons/png/512/1077/1077063.png',
+
+        daysNumber: '',
+        location: {
+          hotel: 'Hotel indigo',
+          department: 'Admin & General',
+          specialist: 'Human Resources',
+        },
+      },
+      {
+        name: 'Amr Ahmed Al-Amir',
+        reqNumber: 270,
+        code: 589,
+        image: 'https://image.flaticon.com/icons/png/512/1077/1077063.png',
+        jobTitle: 'digital  marketing',
+        salaryProfile: 'manager',
+        leaveDate: new Date(2021, 10, 10).toLocaleDateString(),
+        actualLeaving: '',
+        rejoinDate: new Date(2021, 10, 17).toLocaleDateString(),
+        leaveType: 'sick leave',
+        joiningDate: new Date(2019, 5, 12).toLocaleDateString(),
+        leaveToAvail: 'locale',
+        requireSalary: 'no',
+        guarantor: ['ahmed mohammed', 'ismail abo zaid'],
+        guarantorValue: '',
+        replacement: '',
+        address: '',
+        contactNumber: '',
+        email: '',
+        remarks: '',
+        condition: 'success',
+        file: 'https://image.flaticon.com/icons/png/512/1077/1077063.png',
+
+        daysNumber: '',
+        location: {
+          hotel: 'Hotel indigo',
+          department: 'Admin & General',
+          specialist: 'Human Resources',
+        },
+      },
     ],
     selectedEmployee: {
       name: '',
@@ -199,10 +355,15 @@ class App extends React.Component {
         specialist: '',
       },
     },
-    applications: 5,
+    applications: 10,
   };
   updateState = (newEmployees) => {
     this.setState({ employees: newEmployees });
+  };
+  addNewEmployeeToState = (newEmployee, applicationsNumber) => {
+    const employees = this.state.employees;
+    employees.unshift(newEmployee);
+    this.setState({ employees: employees, applications: applicationsNumber });
   };
   render() {
     return (
@@ -216,10 +377,10 @@ class App extends React.Component {
             updateState={this.updateState}
           ></PostLeave>
         </Route>
-        <Route path='/employees'>
+        <Route path='/employees' exact>
           <Employees employeesState={this.state}></Employees>
         </Route>
-        <Route path='/employees:id'>
+        <Route path='/employees/:id'>
           <PostLeave
             className='test'
             {...this.props}
@@ -228,7 +389,10 @@ class App extends React.Component {
           ></PostLeave>{' '}
         </Route>
         <Route path='/new-employee'>
-          <newEmployee></newEmployee>
+          <NewEmployee
+            applications={this.state.applications}
+            addNewEmployee={this.addNewEmployeeToState}
+          ></NewEmployee>
         </Route>
       </React.Fragment>
     );

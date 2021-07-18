@@ -15,7 +15,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useMemo, useState } from 'react';
 import { withRouter } from 'react-router';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-
 import './employees.css';
 import {
   useTable,
@@ -24,20 +23,19 @@ import {
   usePagination,
 } from 'react-table';
 import { Columns } from '../Table/columns';
-
 const Employee = (props) => {
   const [employees, setEmployees] = useState(props.employeesState);
   const [filteredEmployees, setFilteredEmployees] = useState([]);
   const [selectedEmployee, setSelectedEmployee] = useState({});
+
   const [employeesArray, setEmployeesArray] = useState(
     props.employeesState.employees
   );
-  let selectedTest = {};
   const [applications, setApplications] = useState(
     props.employeesState.applications
   );
-  let filteredResult = [];
-  const searchEmployees = (event) => {
+
+  /*const searchEmployees = (event) => {
     let searchValue = event.target.value.toLowerCase();
     if (searchValue) {
       document.querySelector('.action__results__box').style.visibility =
@@ -54,14 +52,15 @@ const Employee = (props) => {
       );
     });
     setFilteredEmployees(FilteredEmployees);
-  };
+  };*/
   /* edit employee */
   const editSelectedEmployee = () => {
-    console.log();
     if (selectedEmployee.length == undefined) {
       alert('please select employee to edit');
     } else {
-      props.history.push({ pathname: 'employees' + selectedEmployee[0].code });
+      props.history.push({
+        pathname: '/employees/' + selectedEmployee[0].code,
+      });
     }
   };
   const rowSelected = (code, event) => {
@@ -74,9 +73,28 @@ const Employee = (props) => {
     });
     event.target.parentElement.classList = 'clicked';
   };
+  const NewEmployee = () => {
+    props.history.push({ pathname: 'new-employee' });
+  };
+  const deleteEmployee = () => {
+    let index = null;
+    if (!selectedEmployee.length) {
+      alert('please select employee to delete');
+      return;
+    } else {
+      index = employeesArray.findIndex(
+        (i) => i.code === selectedEmployee[0].code
+      );
+      const newEmployeesArray = [...employeesArray];
+      newEmployeesArray.splice(index, 1);
+      setEmployeesArray(newEmployeesArray);
+      setSelectedEmployee({});
+    }
+  };
+
   /* start coding for the table */
   const columns = useMemo(() => Columns, []);
-  const data = useMemo(() => employeesArray, []);
+  const data = useMemo(() => employeesArray, [employeesArray]);
   const tableInstance = useTable(
     {
       columns,
@@ -95,8 +113,6 @@ const Employee = (props) => {
     page,
     prepareRow,
     state,
-    nextPage,
-    previousPage,
     pageOptions,
     gotoPage,
     setGlobalFilter,
@@ -185,6 +201,9 @@ const Employee = (props) => {
             icon={faPlus}
             size='lg'
             color='#24298f'
+            onClick={() => {
+              NewEmployee();
+            }}
           ></FontAwesomeIcon>
           <FontAwesomeIcon
             className='actions__right__icon'
@@ -208,14 +227,10 @@ const Employee = (props) => {
           <FontAwesomeIcon
             className='actions__right__icon'
             icon={faTrashAlt}
+            id='delete'
             size='lg'
             color='#24298f'
-          ></FontAwesomeIcon>
-          <FontAwesomeIcon
-            className='actions__right__icon'
-            icon={faPlus}
-            size='lg'
-            color='#24298f'
+            onClick={() => deleteEmployee()}
           ></FontAwesomeIcon>
           <FontAwesomeIcon
             className='actions__right__icon'
@@ -268,7 +283,7 @@ const Employee = (props) => {
                 <tr
                   {...row.getRowProps()}
                   onClick={(event) => {
-                    rowSelected(row.original.code, event);
+                    rowSelected(Number(row.original.code), event);
                   }}
                 >
                   {row.cells.map((cell) => {
@@ -280,7 +295,52 @@ const Employee = (props) => {
           </tbody>
         </table>
         <div className='page__footer'>
-          <div className='page__footer__left'></div>
+          <div className='page__footer__left'>
+            <div className='request__level'>
+              <span className='blue'></span>
+              <span>Request Level</span>
+            </div>
+            <div className='under__approval'>
+              <span className='yellow'></span>
+              <span>Under Approval</span>
+            </div>
+            <div className='final__approve'>
+              <span className='green'></span>
+              <span>Final Approve</span>
+            </div>
+            <div className='action__taken'>
+              <span className='brown'></span>
+              <span>
+                Action Taken (Leaving is posted and approved or leaving
+                extension)
+              </span>
+            </div>
+            <div className='closed_trans'>
+              <span className='brown__dark'></span>
+              <span>Closed Transaction</span>
+            </div>
+            <div className='future__transaction'>
+              <span className='blue__light'></span>
+              <span>Future Date Transaction</span>
+            </div>
+            <div className='request__returned'>
+              <span className='red'></span>
+              <span>Returned</span>
+            </div>
+            <div className='request__hold'>
+              <span className='brown__3'></span>
+              <span>Hold</span>
+            </div>
+            <div className='request__hold__returned'>
+              <span className='gray'></span>
+              <span>Returned And On Hold</span>
+            </div>
+            <div className='request__extended'>
+              <span className='pink'></span>
+              <span>Extended Leave Request</span>
+            </div>
+          </div>
+
           <div className='page__footer__right'>
             <input
               type='number'
